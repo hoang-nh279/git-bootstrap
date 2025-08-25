@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* Màn hình nhỏ hơn 700px → 2 ảnh 1 hàng */
+        @media screen and (max-width: 700px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Màn hình nhỏ hơn 500px → 1 ảnh 1 hàng */
+        @media screen and (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2 style="text-align:center; padding:10px;">Responsive Gallery</h2>
+<div class="gallery">
+    <img src="https://picsum.photos/id/1011/400/300" alt="Ảnh 1">
+    <img src="https://picsum.photos/id/1012/400/300" alt="Ảnh 2">
+    <img src="https://picsum.photos/id/1015/400/300" alt="Ảnh 3">
+    <img src="https://picsum.photos/id/1016/400/300" alt="Ảnh 4">
+    <img src="https://picsum.photos/id/1018/400/300" alt="Ảnh 5">
+    <img src="https://picsum.photos/id/1020/400/300" alt="Ảnh 6">
+    <img src="https://picsum.photos/id/1021/400/300" alt="Ảnh 7">
+    <img src="https://picsum.photos/id/1024/400/300" alt="Ảnh 8">
+</div>
+</body>
+</html>
